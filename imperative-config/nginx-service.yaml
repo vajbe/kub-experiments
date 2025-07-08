@@ -1,0 +1,18 @@
+# Below command is converted here
+# kubectl expose pod nginx-pod --type=NodePort --port=80
+# kubectl run -it alpine --image=alipne:3.20 sh
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-svc
+  labels:
+    app: nginx
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+  selector:
+    app: nginx
