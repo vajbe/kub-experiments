@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+  labels:
+    app: nginx
+spec:
+  containers:
+    - image: nginx:1.27.0
+      name: nginx-container
+      ports:
+        - containerPort: 80
+# Create object
+# kubectl create -f nginx-pod.yaml
+# Get Pods
+# kubectl get pods
+# Describe
+# kubectl describe pod <pod-name>
