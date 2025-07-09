@@ -11,8 +11,10 @@ spec:
       ports:
         - containerPort: 80
 # Create object
-# kubectl create -f nginx-pod.yaml
+# cmd: kubectl create -f nginx-pod.yaml
 # Get Pods
-# kubectl get pods
+# cmd: kubectl get pods
 # Describe
-# kubectl describe pod <pod-name>
+# cmd: kubectl describe pod <pod-name>
+# Auto Generate manifest
+# cmd: kubectl run nginx-p --image=nginx:1.27.0 --dry-run=client -o yaml
